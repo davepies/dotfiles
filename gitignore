@@ -1,0 +1,19 @@
+.DS_Store
+x_gateway_simulator.rb
+*~
+
+# Ruby
+.rvmrc
+.rbenv-gemsets
+.rbenv-vars
+.rbenv-version
+.ruby-version
+
+# LaTeX
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.log
+*.bbl
+*.blg
