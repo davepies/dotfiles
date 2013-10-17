@@ -38,7 +38,7 @@ alias tmux="tmux -2"
 # NODE PATH
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/jsctags/
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/bin/
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.local/bin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -19,8 +19,13 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'Townk/vim-autoclose.git'
 Bundle 'Shougo/neosnippet'
 Bundle 'chriskempson/base16-vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'nathanaelkane/vim-indent-guides.git'
 
 filetype plugin indent on " Required by Vundle
+
+" don't beep for errors
+  set visualbell
 
 " Wildmenu
   set wildmenu
@@ -54,6 +59,12 @@ filetype plugin indent on " Required by Vundle
   set number          " Show line numbers
   set ruler           " Show cursor position
   set spelllang=en_au " Australian English
+
+" make backspace work in insert mode
+  set backspace=indent,eol,start "
+
+" pick up external file modifications
+  set autoread
 
 " Persistent undo
   set undofile                " Save undo's after file closes
@@ -140,6 +151,12 @@ filetype plugin indent on " Required by Vundle
   if has('conceal')
     set conceallevel=2 concealcursor=i
   endif
+
+" Nerdtree
+  let NERDTreeHijackNetrw = 0
+  nmap gt :NERDTreeToggle<CR>
+  nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<CR>
+
 
 " FUNCTIONS
   " Strip trailing whitespace
