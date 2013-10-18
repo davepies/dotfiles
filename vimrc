@@ -21,6 +21,7 @@ Bundle 'Shougo/neosnippet'
 Bundle 'chriskempson/base16-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'nathanaelkane/vim-indent-guides.git'
+Bundle 'scrooloose/syntastic.git'
 
 filetype plugin indent on " Required by Vundle
 
@@ -153,10 +154,8 @@ filetype plugin indent on " Required by Vundle
   endif
 
 " Nerdtree
-  let NERDTreeHijackNetrw = 0
+  let NERDTreeHijackNetrw = 1
   nmap gt :NERDTreeToggle<CR>
-  nmap g :NERDTree \| NERDTreeToggle \| NERDTreeFind<CR>
-
 
 " FUNCTIONS
   " Strip trailing whitespace
