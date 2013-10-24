@@ -9,7 +9,6 @@ Bundle 'gmarik/vundle'
 Bundle 'bufkill.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'sheerun/vim-polyglot'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-surround'
@@ -22,6 +21,7 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'nathanaelkane/vim-indent-guides.git'
 Bundle 'scrooloose/syntastic.git'
+Bundle 'sheerun/vim-polyglot'
 
 filetype plugin indent on " Required by Vundle
 
@@ -73,6 +73,9 @@ filetype plugin indent on " Required by Vundle
   set undolevels=1000         " How many undos
   set undoreload=10000        " Number of lines to save
 
+" HTML indent
+  let g:html_indent_tags = 'li'
+
 " NetRW
   let g:netrw_list_hide= '^\..*$' " Hide dotfiles
   let g:netrw_banner=0            " Disable banner
@@ -96,6 +99,9 @@ filetype plugin indent on " Required by Vundle
     exec "bd" fnamemodify(getline('.')[2:], ':p')
     exec "norm \<F5>"
   endfunc
+
+" AutoClose
+  let g:AutoCloseExpandEnterOn="{"
 
 " Neocomplcache
   " Disable AutoComplPop.
@@ -188,4 +194,3 @@ filetype plugin indent on " Required by Vundle
   map <LEADER>s :set spell!<CR>|"                   Toggle spell
   map <LEADER>f :Ack!<Space>|"                      Search
   map <C-B> :CtrlPBuffer<CR>|"                      CtrlP in buffer mode
-
