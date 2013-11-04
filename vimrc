@@ -5,6 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'Align'
 Bundle 'gmarik/vundle'
 Bundle 'bufkill.vim'
 Bundle 'mileszs/ack.vim'
@@ -81,7 +82,8 @@ filetype plugin indent on " Required by Vundle
   let g:netrw_liststyle=3         " Tree
 
 " Color
-  color smyck
+  " color smyck
+  color base16-default
 
 " CtrlP
   let g:ctrlp_working_path_mode = 0 " Don't manage. Plays nicely with `bundle open <name>`

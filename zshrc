@@ -4,7 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+# cloud
+ZSH_THEME="sammy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -48,3 +49,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+  export TERM='xterm-256color'
+else
+  export TERM='xterm-color'
+fi
