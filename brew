@@ -12,7 +12,7 @@ brew install git
 brew install lynx
 brew install node
 brew install vim
-brew install mvim
+brew install macvim --with-lua
 
 brew tap homebrew/versions
 brew install lua52
