@@ -33,6 +33,7 @@ installcask iterm2
 installcask the-unarchiver
 installcask virtualbox
 installcask vlc
+installcask spectacle
 
 # Remove outdated versions from the cellar
 brew cleanup
