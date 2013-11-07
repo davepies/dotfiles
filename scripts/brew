@@ -11,8 +11,16 @@ brew install ack
 brew install git
 brew install lynx
 brew install node
-brew install vim
+brew install vim --with-lua
 brew install macvim --with-lua
+
+brew install rbenv
+brew install ruby-build
+
+brew install z
+
+brew zsh
+brew oh-my-zsh
 
 brew tap homebrew/versions
 brew install lua52
