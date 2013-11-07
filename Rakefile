@@ -2,7 +2,7 @@ require 'pathname'
 
 DEST = ENV['DEST'] || Dir.home
 SRC = ENV['SRC'] || Dir.pwd
-UNLINKABLES = ['LICENSE', 'Rakefile', 'README.md']
+UNLINKABLES = ['LICENSE', 'Rakefile', 'README.md', 'scripts']
 
 task :link => :unlink do
   (Dir['*'] - UNLINKABLES).each do |file|
