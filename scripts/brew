@@ -19,8 +19,8 @@ brew install ruby-build
 
 brew install z
 
-brew zsh
-brew oh-my-zsh
+brew install zsh
+brew install oh-my-zsh
 
 brew tap homebrew/versions
 brew install lua52
