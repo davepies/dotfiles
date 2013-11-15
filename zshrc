@@ -55,3 +55,6 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
   export TERM='xterm-color'
 fi
+
+# Aliases
+alias c="clear"
