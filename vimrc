@@ -8,7 +8,7 @@ call vundle#rc()
 Bundle 'Align'
 Bundle 'gmarik/vundle'
 Bundle 'bufkill.vim'
-Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
