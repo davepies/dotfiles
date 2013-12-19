@@ -34,11 +34,23 @@ function installcask() {
 
 installcask dropbox
 installcask imageoptim
-# installcask iterm2
+installcask iterm2
 installcask the-unarchiver
 installcask virtualbox
 installcask vlc
 installcask spectacle
+installcask kaleidoscope
+installcask firefox
+installcask vagrant
+installcask evernote
+installcask spotify
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# oh-my-zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+# vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall
