@@ -23,6 +23,10 @@ Bundle 'nathanaelkane/vim-indent-guides.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'sheerun/vim-polyglot'
 
+" Dash
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+
 filetype plugin indent on " Required by Vundle
 
 " don't beep for errors
