@@ -58,3 +58,11 @@ fi
 
 # Aliases
 alias c="clear"
+
+# TODO
+todo () {
+  IFS_OLD="$IFS"
+  IFS=$'\n'
+  touch $(echo ~/Desktop/$@)
+  IFS="$IFS_OLD"
+}
