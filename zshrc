@@ -58,6 +58,7 @@ fi
 
 # Aliases
 alias c="clear"
+alias node="node --harmony"
 
 # TODO
 todo () {
