@@ -60,6 +60,11 @@ fi
 alias c="clear"
 alias node="node --harmony"
 
+# Node Path
+NODE_PATH=$NODE_PATH:/Users/davepies/.local/lib/node_modules
+
+[[ -s /Users/davepies/.nvm/nvm.sh ]] && . /Users/davepies/.nvm/nvm.sh # This loads NVM
+
 # TODO
 todo () {
   IFS_OLD="$IFS"

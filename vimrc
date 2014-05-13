@@ -22,6 +22,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'nathanaelkane/vim-indent-guides.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'sheerun/vim-polyglot'
+Bundle 'jimmyhchan/dustjs.vim'
+Bundle 'marijnh/tern_for_vim'
 
 " Dash
 Bundle 'rizzatti/funcoo.vim'
@@ -193,3 +195,6 @@ filetype plugin indent on " Required by Vundle
   map <LEADER>s :set spell!<CR>|"                   Toggle spell
   map <LEADER>f :Ack!<Space>|"                      Search
   map <C-B> :CtrlPBuffer<CR>|"                      CtrlP in buffer mode
+
+" FILETYPES
+  au FileType javascript setl sw=4 sts=4 et
