@@ -2,32 +2,35 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'Align'
-Bundle 'gmarik/vundle'
-Bundle 'bufkill.vim'
-Bundle 'rking/ag.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'Townk/vim-autoclose.git'
-Bundle 'chriskempson/base16-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'nathanaelkane/vim-indent-guides.git'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'sheerun/vim-polyglot'
-Bundle 'jimmyhchan/dustjs.vim'
-Bundle 'marijnh/tern_for_vim'
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'Align'
+Plugin 'bufkill.vim'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-surround'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'tmhedberg/matchit'
+Plugin 'Townk/vim-autoclose.git'
+Plugin 'chriskempson/base16-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'nathanaelkane/vim-indent-guides.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'jimmyhchan/dustjs.vim'
+Plugin 'marijnh/tern_for_vim'
 
 " Dash
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
+
+call vundle#end()
 
 filetype plugin indent on " Required by Vundle
 
@@ -86,10 +89,6 @@ filetype plugin indent on " Required by Vundle
   let g:netrw_list_hide= '^\..*$' " Hide dotfiles
   let g:netrw_banner=0            " Disable banner
   let g:netrw_liststyle=3         " Tree
-
-" Color
-  " color smyck
-  color base16-default
 
 " CtrlP
   let g:ctrlp_working_path_mode = 0 " Don't manage. Plays nicely with `bundle open <name>`

@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # cloud
-ZSH_THEME="sammy"
+ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -72,3 +72,8 @@ todo () {
   touch $(echo ~/Desktop/$@)
   IFS="$IFS_OLD"
 }
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
