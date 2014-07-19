@@ -19,6 +19,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'Townk/vim-autoclose.git'
 Plugin 'chriskempson/base16-vim'
+Plugin 'zenorocha/dracula-theme'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 Plugin 'scrooloose/syntastic.git'
@@ -29,6 +30,8 @@ Plugin 'marijnh/tern_for_vim'
 " Dash
 Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
+
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 

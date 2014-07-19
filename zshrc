@@ -63,8 +63,6 @@ alias node="node --harmony"
 # Node Path
 NODE_PATH=$NODE_PATH:/Users/davepies/.local/lib/node_modules
 
-[[ -s /Users/davepies/.nvm/nvm.sh ]] && . /Users/davepies/.nvm/nvm.sh # This loads NVM
-
 # TODO
 todo () {
   IFS_OLD="$IFS"
@@ -77,3 +75,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
+
+#NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
