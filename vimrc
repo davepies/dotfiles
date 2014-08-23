@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Align'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'bufkill.vim'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
