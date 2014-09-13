@@ -76,8 +76,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 #NVM
-export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
 
 #GO
 export GOPATH=$HOME/work/go
