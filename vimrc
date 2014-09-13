@@ -1,41 +1,43 @@
 " Required by Vundle
-set nocompatible
-filetype off
+  set nocompatible
+  filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+  Plugin 'gmarik/Vundle.vim'
 
-Plugin 'junegunn/vim-easy-align'
-Plugin 'bufkill.vim'
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-surround'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'tmhedberg/matchit'
-Plugin 'Townk/vim-autoclose.git'
-Plugin 'chriskempson/base16-vim'
-Plugin 'zenorocha/dracula-theme'
-Plugin 'scrooloose/nerdtree'
-Plugin 'nathanaelkane/vim-indent-guides.git'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'jimmyhchan/dustjs.vim'
-Plugin 'marijnh/tern_for_vim'
+  Plugin 'junegunn/vim-easy-align'
+  Plugin 'bufkill.vim'
+  Plugin 'rking/ag.vim'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'tomtom/tcomment_vim'
+  Plugin 'tpope/vim-eunuch'
+  Plugin 'tpope/vim-surround'
+  Plugin 'Lokaltog/vim-easymotion'
+  Plugin 'Shougo/neocomplete.vim'
+  Plugin 'tmhedberg/matchit'
+  Plugin 'Townk/vim-autoclose.git'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'nathanaelkane/vim-indent-guides.git'
+  Plugin 'scrooloose/syntastic.git'
+  Plugin 'sheerun/vim-polyglot'
+  Plugin 'jimmyhchan/dustjs.vim'
+  Plugin 'marijnh/tern_for_vim'
 
-" Dash
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
+  " Colors
+  Plugin 'chriskempson/base16-vim'
+  Plugin 'zenorocha/dracula-theme'
 
-Plugin 'editorconfig/editorconfig-vim'
+  " Dash
+  Plugin 'rizzatti/funcoo.vim'
+  Plugin 'rizzatti/dash.vim'
 
-call vundle#end()
+  Plugin 'editorconfig/editorconfig-vim'
 
-filetype plugin indent on " Required by Vundle
+  call vundle#end()
+
+  filetype plugin indent on
 
 " don't beep for errors
   set visualbell
