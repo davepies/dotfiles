@@ -59,6 +59,7 @@ fi
 # Aliases
 alias c="clear"
 alias node="node --harmony"
+alias sshkey="cat ./.ssh/id_rsa.pub"
 
 # Node Path
 NODE_PATH=$NODE_PATH:/Users/davepies/.local/lib/node_modules
