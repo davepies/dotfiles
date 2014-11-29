@@ -1,54 +1,42 @@
-export ZSH=$HOME/.oh-my-zsh
+source ./antigen.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-# cloud
-ZSH_THEME="robbyrussell"
+# vi mode key timeout
+export KEYTIMEOUT=1
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+antigen use oh-my-zsh
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+antigen bundles <<EOBUNDLES
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+zsh-users/zsh-completions src
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+sindresorhus/pure
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+rupa/z
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+git
+npm
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+EOBUNDLES
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse osx)
-plugins=(history-substring-search git web-search autojump brew node python)
+antigen apply
 
-source $ZSH/oh-my-zsh.sh
+# default bindings for zsh-users/zsh-history-substring-search
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
-alias tmux="tmux -2"
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
 
-# Customize to your needs...
-# NODE PATH
-export NODE_PATH=/usr/local/lib/node:/usr/local/lib/jsctags
+bindkey -M vicmd 'j' history-substring-search-down
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/.local/bin
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-. `brew --prefix`/etc/profile.d/z.sh
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
   export TERM='xterm-256color'
@@ -56,13 +44,7 @@ else
   export TERM='xterm-color'
 fi
 
-# Aliases
 alias c="clear"
-alias node="node --harmony"
-alias sshkey="cat ./.ssh/id_rsa.pub"
-
-# Node Path
-NODE_PATH=$NODE_PATH:/Users/davepies/.local/lib/node_modules
 
 # TODO
 todo () {
@@ -72,14 +54,26 @@ todo () {
   IFS="$IFS_OLD"
 }
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 
-#NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
-#GO
-export GOPATH=$HOME/work/go
-export PATH=$PATH:$GOPATH/bin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
