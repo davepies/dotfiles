@@ -1,7 +1,7 @@
 " GUI
 if has("gui_running")
 
-  colorscheme dracula
+  colorscheme base16-eighties
 
   set background=dark
   set guifont=Monaco:h14
