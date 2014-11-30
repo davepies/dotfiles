@@ -26,6 +26,8 @@
   Plugin 'jimmyhchan/dustjs.vim'
   Plugin 'marijnh/tern_for_vim'
 
+  Plugin 'miripiruni/Csscomb-for-Vim'
+
   " Colors
   Plugin 'chriskempson/base16-vim'
   Plugin 'zenorocha/dracula-theme'
@@ -164,6 +166,9 @@
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Css Comb
+  autocmd FileType css nmap cc :CSScomb<CR>
 
 " Nerdtree
   let NERDTreeHijackNetrw = 1
