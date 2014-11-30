@@ -1,4 +1,4 @@
-source ./antigen.zsh
+source ~/.antigen.zsh
 
 # vi mode key timeout
 export KEYTIMEOUT=1
