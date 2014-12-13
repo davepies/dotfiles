@@ -25,9 +25,11 @@
   Plugin 'jimmyhchan/dustjs.vim'
   Plugin 'marijnh/tern_for_vim'
 
+  " vimtodo
+  Plugin 'vitalk/vim-simple-todo'
+
   " Colors
   Plugin 'chriskempson/base16-vim'
-  Plugin 'zenorocha/dracula-theme'
 
   " Dash
   Plugin 'rizzatti/funcoo.vim'
