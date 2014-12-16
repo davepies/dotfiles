@@ -19,14 +19,14 @@
   Plugin 'tmhedberg/matchit'
   Plugin 'Townk/vim-autoclose.git'
   Plugin 'scrooloose/nerdtree'
+  Plugin 'scrooloose/nerdcommenter'
   Plugin 'nathanaelkane/vim-indent-guides.git'
   Plugin 'scrooloose/syntastic.git'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'jimmyhchan/dustjs.vim'
   Plugin 'marijnh/tern_for_vim'
 
-  " vimtodo
-  Plugin 'vitalk/vim-simple-todo'
+  Plugin 'miripiruni/Csscomb-for-Vim'
 
   " Colors
   Plugin 'chriskempson/base16-vim'
@@ -165,6 +165,9 @@
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Css Comb
+  autocmd FileType css nmap cc :CSScomb<CR>
 
 " Nerdtree
   let NERDTreeHijackNetrw = 1
