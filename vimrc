@@ -5,39 +5,47 @@
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
 
-  Plugin 'gmarik/Vundle.vim'
+    Plugin 'gmarik/Vundle.vim'
 
-  Plugin 'junegunn/vim-easy-align'
-  Plugin 'bufkill.vim'
-  Plugin 'rking/ag.vim'
-  Plugin 'kien/ctrlp.vim'
-  Plugin 'tomtom/tcomment_vim'
-  Plugin 'tpope/vim-eunuch'
-  Plugin 'tpope/vim-surround'
-  Plugin 'Lokaltog/vim-easymotion'
-  Plugin 'Shougo/neocomplete.vim'
-  Plugin 'tmhedberg/matchit'
-  Plugin 'Townk/vim-autoclose.git'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'scrooloose/nerdcommenter'
-  Plugin 'nathanaelkane/vim-indent-guides.git'
-  Plugin 'scrooloose/syntastic.git'
-  Plugin 'sheerun/vim-polyglot'
-  Plugin 'jimmyhchan/dustjs.vim'
-  Plugin 'marijnh/tern_for_vim'
+    Plugin 'junegunn/vim-easy-align'
+    Plugin 'bufkill.vim'
+    Plugin 'rking/ag.vim'
+    Plugin 'kien/ctrlp.vim'
+    Plugin 'tomtom/tcomment_vim'
+    Plugin 'tpope/vim-eunuch'
+    Plugin 'tpope/vim-surround'
+    Plugin 'Lokaltog/vim-easymotion'
+    Plugin 'Shougo/neocomplete.vim'
+    Plugin 'tmhedberg/matchit'
+    Plugin 'Townk/vim-autoclose.git'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'nathanaelkane/vim-indent-guides.git'
+    Plugin 'scrooloose/syntastic.git'
+    Plugin 'sheerun/vim-polyglot'
+    Plugin 'jimmyhchan/dustjs.vim'
+    Plugin 'marijnh/tern_for_vim'
 
-  Plugin 'miripiruni/Csscomb-for-Vim'
+    Plugin 'miripiruni/Csscomb-for-Vim'
 
-  " Colors
-  Plugin 'chriskempson/base16-vim'
+    Plugin 'bling/vim-airline'
 
-  " Dash
-  Plugin 'rizzatti/funcoo.vim'
-  Plugin 'rizzatti/dash.vim'
+    " Git
+    Plugin 'tpope/vim-fugitive'
 
-  Plugin 'editorconfig/editorconfig-vim'
+    " Colors
+    Plugin 'chriskempson/base16-vim'
+
+    " Dash
+    Plugin 'rizzatti/funcoo.vim'
+    Plugin 'rizzatti/dash.vim'
+
+    Plugin 'editorconfig/editorconfig-vim'
 
   call vundle#end()
+
+" for airline
+  set laststatus=2
 
   filetype plugin indent on
 

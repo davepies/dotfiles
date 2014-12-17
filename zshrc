@@ -10,7 +10,7 @@ antigen bundles <<EOBUNDLES
 zsh-users/zsh-completions src
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
-sindresorhus/pure
+# sindresorhus/pure
 
 rupa/z
 
@@ -19,6 +19,7 @@ npm
 
 EOBUNDLES
 
+antigen theme cloud
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
