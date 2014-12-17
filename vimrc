@@ -26,6 +26,8 @@
   Plugin 'jimmyhchan/dustjs.vim'
   Plugin 'marijnh/tern_for_vim'
 
+  Plugin 'drawit'
+
   Plugin 'miripiruni/Csscomb-for-Vim'
 
   " Colors
@@ -208,3 +210,7 @@
 
 " FILETYPES
   au FileType javascript setl sw=4 sts=4 et
+
+" Move visual block
+  vnoremap J :m '>+1<CR>gv=gv
+  vnoremap K :m '<-2<CR>gv=gv
