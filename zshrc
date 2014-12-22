@@ -19,7 +19,7 @@ npm
 
 EOBUNDLES
 
-antigen theme cloud
+antigen theme minimal
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search

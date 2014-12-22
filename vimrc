@@ -27,6 +27,8 @@
     Plugin 'marijnh/tern_for_vim'
     Plugin 'miripiruni/Csscomb-for-Vim'
 
+    Plugin 'heavenshell/vim-jsdoc'
+
     Plugin 'bling/vim-airline'
     Plugin 'drawit'
 
