@@ -46,6 +46,13 @@
 
 " for airline
   set laststatus=2
+  let g:airline_powerline_fonts=1
+  set guifont=Inconsolata\ for\ Powerline:h15
+  set encoding=utf-8
+  set t_Co=256
+  set fillchars+=stl:\ ,stlnc:\
+  set term=xterm-256color
+  set termencoding=utf-8
 
   filetype plugin indent on
 
