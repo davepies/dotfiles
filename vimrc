@@ -46,6 +46,10 @@
 
   call vundle#end()
 
+" easy align
+  vmap <Enter> <Plug>(EasyAlign)
+  nmap ga <Plug>(EasyAlign)
+
 " for airline
   set laststatus=2
   let g:airline_powerline_fonts=1
