@@ -45,7 +45,9 @@ else
   export TERM='xterm-color'
 fi
 
-alias c="clear"
+alias c='clear'
+alias glf='git log --pretty=fuller'
+alias glfg='git log --pretty=fuller --graph'
 
 # TODO
 todo () {
