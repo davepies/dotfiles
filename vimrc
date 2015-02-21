@@ -27,6 +27,7 @@
   Plugin 'marijnh/tern_for_vim'
 
   Plugin 'miripiruni/Csscomb-for-Vim'
+  Plugin 'heavenshell/vim-jsdoc'
 
   " Colors
   Plugin 'chriskempson/base16-vim'
@@ -168,7 +169,7 @@
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Css Comb
-  autocmd FileType css nmap cc :CSScomb<CR>
+  autocmd FileType css,scss nmap cc :CSScomb<CR>
 
 " Nerdtree
   let NERDTreeHijackNetrw = 1
