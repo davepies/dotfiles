@@ -5,41 +5,62 @@
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
 
-  Plugin 'gmarik/Vundle.vim'
+    Plugin 'gmarik/Vundle.vim'
 
-  Plugin 'junegunn/vim-easy-align'
-  Plugin 'bufkill.vim'
-  Plugin 'rking/ag.vim'
-  Plugin 'kien/ctrlp.vim'
-  Plugin 'tomtom/tcomment_vim'
-  Plugin 'tpope/vim-eunuch'
-  Plugin 'tpope/vim-surround'
-  Plugin 'Lokaltog/vim-easymotion'
-  Plugin 'Shougo/neocomplete.vim'
-  Plugin 'tmhedberg/matchit'
-  Plugin 'Townk/vim-autoclose.git'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'scrooloose/nerdcommenter'
-  Plugin 'nathanaelkane/vim-indent-guides.git'
-  Plugin 'scrooloose/syntastic.git'
-  Plugin 'sheerun/vim-polyglot'
-  Plugin 'jimmyhchan/dustjs.vim'
-  Plugin 'marijnh/tern_for_vim'
+    Plugin 'junegunn/vim-easy-align'
+    Plugin 'bufkill.vim'
+    Plugin 'rking/ag.vim'
+    Plugin 'kien/ctrlp.vim'
+    Plugin 'tomtom/tcomment_vim'
+    Plugin 'tpope/vim-eunuch'
+    Plugin 'tpope/vim-surround'
+    Plugin 'Lokaltog/vim-easymotion'
+    Plugin 'Shougo/neocomplete.vim'
+    Plugin 'tmhedberg/matchit'
+    Plugin 'Townk/vim-autoclose.git'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'nathanaelkane/vim-indent-guides.git'
+    Plugin 'scrooloose/syntastic.git'
+    Plugin 'sheerun/vim-polyglot'
+    Plugin 'jimmyhchan/dustjs.vim'
+    Plugin 'marijnh/tern_for_vim'
+    Plugin 'miripiruni/Csscomb-for-Vim'
 
-  Plugin 'miripiruni/Csscomb-for-Vim'
-  Plugin 'heavenshell/vim-jsdoc'
+    Plugin 'Chiel92/vim-autoformat'
 
-  " Colors
-  Plugin 'chriskempson/base16-vim'
-  Plugin 'zenorocha/dracula-theme'
+    Plugin 'heavenshell/vim-jsdoc'
 
-  " Dash
-  Plugin 'rizzatti/funcoo.vim'
-  Plugin 'rizzatti/dash.vim'
+    Plugin 'bling/vim-airline'
+    Plugin 'drawit'
 
-  Plugin 'editorconfig/editorconfig-vim'
+    " Git
+    Plugin 'tpope/vim-fugitive'
+
+    " Colors
+    Plugin 'chriskempson/base16-vim'
+
+    " Dash
+    Plugin 'rizzatti/funcoo.vim'
+    Plugin 'rizzatti/dash.vim'
+
+    Plugin 'editorconfig/editorconfig-vim'
 
   call vundle#end()
+
+" easy align
+  vmap <Enter> <Plug>(EasyAlign)
+  nmap ga <Plug>(EasyAlign)
+
+" for airline
+  set laststatus=2
+  let g:airline_powerline_fonts=1
+  set guifont=Inconsolata\ for\ Powerline:h15
+  set encoding=utf-8
+  set t_Co=256
+  set fillchars+=stl:\ ,stlnc:\
+  set term=xterm-256color
+  set termencoding=utf-8
 
   filetype plugin indent on
 
@@ -209,3 +230,7 @@
 
 " FILETYPES
   au FileType javascript setl sw=4 sts=4 et
+
+" Move visual block
+  vnoremap J :m '>+1<CR>gv=gv
+  vnoremap K :m '<-2<CR>gv=gv

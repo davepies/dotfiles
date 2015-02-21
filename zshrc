@@ -10,7 +10,7 @@ antigen bundles <<EOBUNDLES
 zsh-users/zsh-completions src
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
-sindresorhus/pure
+# sindresorhus/pure
 
 rupa/z
 
@@ -19,6 +19,7 @@ npm
 
 EOBUNDLES
 
+antigen theme minimal
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
@@ -44,7 +45,9 @@ else
   export TERM='xterm-color'
 fi
 
-alias c="clear"
+alias c='clear'
+alias glf='git log --pretty=fuller'
+alias glfg='git log --pretty=fuller --graph'
 
 # TODO
 todo () {
