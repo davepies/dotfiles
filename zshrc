@@ -19,7 +19,7 @@ npm
 
 EOBUNDLES
 
-antigen theme minimal
+antigen theme avit
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
@@ -57,26 +57,5 @@ todo () {
   IFS="$IFS_OLD"
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# NODE
+export NODE_ENV=development
