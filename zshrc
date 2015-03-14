@@ -19,7 +19,7 @@ npm
 
 EOBUNDLES
 
-antigen theme norm
+antigen theme blinks
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
