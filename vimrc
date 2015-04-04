@@ -51,6 +51,9 @@
 
   call vundle#end()
 
+" syntastic
+  let g:syntastic_javascript_checkers=['eslint']
+
 " easy align
   vmap <Enter> <Plug>(EasyAlign)
   nmap ga <Plug>(EasyAlign)
