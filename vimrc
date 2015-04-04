@@ -46,6 +46,9 @@
 
     Plugin 'editorconfig/editorconfig-vim'
 
+    " Multiple Cursors
+    Plugin 'terryma/vim-multiple-cursors'
+
   call vundle#end()
 
 " easy align
