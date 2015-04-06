@@ -47,8 +47,13 @@
 
     Plugin 'editorconfig/editorconfig-vim'
 
+    " Multiple Cursors
+    Plugin 'terryma/vim-multiple-cursors'
+
   call vundle#end()
 
+" syntastic
+  let g:syntastic_javascript_checkers=['eslint']
 
 " JsBeautify(
   map <c-f> :call JsBeautify()<cr>
@@ -195,7 +200,7 @@
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Css Comb
-  autocmd FileType css nmap cc :CSScomb<CR>
+  autocmd FileType css,scss nmap cc :CSScomb<CR>
 
 " Nerdtree
   let NERDTreeHijackNetrw = 1
