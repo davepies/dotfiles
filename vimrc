@@ -29,6 +29,7 @@
 
     Plugin 'Chiel92/vim-autoformat'
 
+    Plugin 'maksimr/vim-jsbeautify'
     Plugin 'heavenshell/vim-jsdoc'
 
     Plugin 'bling/vim-airline'
@@ -47,6 +48,10 @@
     Plugin 'editorconfig/editorconfig-vim'
 
   call vundle#end()
+
+
+" JsBeautify(
+  map <c-f> :call JsBeautify()<cr>
 
 " easy align
   vmap <Enter> <Plug>(EasyAlign)
