@@ -33,7 +33,6 @@
     Plugin 'heavenshell/vim-jsdoc'
 
     Plugin 'bling/vim-airline'
-    Plugin 'drawit'
 
     " Git
     Plugin 'tpope/vim-fugitive'
@@ -49,6 +48,10 @@
 
     " Multiple Cursors
     Plugin 'terryma/vim-multiple-cursors'
+
+    " Snippets
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
 
   call vundle#end()
 
@@ -205,6 +208,13 @@
 " Nerdtree
   let NERDTreeHijackNetrw = 1
   nmap gt :NERDTreeToggle<CR>
+
+" Snippets
+  let g:UltiSnipsExpandTrigger="<S-tab>"
+  let g:UltiSnipsListSnippets="<c-l>"
+  let g:UltiSnipsJumpForwardTrigger="<c-b>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+  let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips', $HOME.'/dotfiles/vimsnippets']
 
 " FUNCTIONS
   " Strip trailing whitespace
