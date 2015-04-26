@@ -49,6 +49,8 @@ alias c='clear'
 alias glf='git log --pretty=fuller'
 alias glfg='git log --pretty=fuller --graph'
 
+alias mongod='mongod --config /usr/local/etc/mongod.conf'
+
 # TODO
 todo () {
   IFS_OLD="$IFS"
