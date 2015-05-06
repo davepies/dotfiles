@@ -53,6 +53,10 @@
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
 
+    " Ctags Generation
+    Plugin 'szw/vim-tags'
+    Plugin 'majutsushi/tagbar'
+
   call vundle#end()
 
 " syntastic
@@ -247,6 +251,7 @@
   map <LEADER>s :set spell!<CR>|"                   Toggle spell
   map <LEADER>f :Ack!<Space>|"                      Search
   map <C-B> :CtrlPBuffer<CR>|"                      CtrlP in buffer mode
+  map <C-T> :CtrlPTag<CR>|"
 
 " FILETYPES
   au FileType javascript setl sw=4 sts=4 et
@@ -254,3 +259,6 @@
 " Move visual block
   vnoremap J :m '>+1<CR>gv=gv
   vnoremap K :m '<-2<CR>gv=gv
+
+" Ctags
+  set tags=tags,./tags
