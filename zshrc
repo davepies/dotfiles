@@ -23,6 +23,7 @@ httpie
 vi-mode
 web-search
 tmux
+chucknorris
 
 EOBUNDLES
 
