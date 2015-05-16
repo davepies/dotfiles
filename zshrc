@@ -50,6 +50,7 @@ alias glf='git log --pretty=fuller'
 alias glfg='git log --pretty=fuller --graph'
 
 alias mongod='mongod --config /usr/local/etc/mongod.conf'
+alias fuck='$(thefuck $(fc -ln -1))'
 
 # TODO
 todo () {
