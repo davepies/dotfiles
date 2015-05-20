@@ -15,11 +15,19 @@ zsh-users/zsh-history-substring-search
 rupa/z
 
 git
+git-extras
 npm
+node
+osx
+httpie
+vi-mode
+web-search
+tmux
+chucknorris
 
 EOBUNDLES
 
-antigen theme blinks
+antigen theme norm
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
