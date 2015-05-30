@@ -60,6 +60,8 @@ alias glfg='git log --pretty=fuller --graph'
 alias mongod='mongod --config /usr/local/etc/mongod.conf'
 alias fuck='$(thefuck $(fc -ln -1))'
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 # TODO
 todo () {
   IFS_OLD="$IFS"
