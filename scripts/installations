@@ -23,6 +23,7 @@ brew tap homebrew/versions
 brew install lua52
 
 brew install thefuck
+brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
 # Install native apps
 brew install caskroom/cask/brew-cask
