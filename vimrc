@@ -59,6 +59,10 @@
 
   call vundle#end()
 
+" CursorLine
+  set cursorline
+  hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
+
 " syntastic
   let g:syntastic_javascript_checkers=['eslint']
 
