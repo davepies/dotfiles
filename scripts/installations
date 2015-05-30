@@ -22,6 +22,8 @@ brew install zsh
 brew tap homebrew/versions
 brew install lua52
 
+brew install thefuck
+
 # Install native apps
 brew install caskroom/cask/brew-cask
 

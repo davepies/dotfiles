@@ -27,7 +27,7 @@ chucknorris
 
 EOBUNDLES
 
-antigen theme norm
+antigen theme amuse # norm lambda cloud
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
@@ -58,7 +58,7 @@ alias glf='git log --pretty=fuller'
 alias glfg='git log --pretty=fuller --graph'
 
 alias mongod='mongod --config /usr/local/etc/mongod.conf'
-alias fuck='$(thefuck $(fc -ln -1))'
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
