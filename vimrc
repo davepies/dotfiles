@@ -27,12 +27,12 @@
     Plugin 'marijnh/tern_for_vim'
     Plugin 'miripiruni/Csscomb-for-Vim'
 
-    Plugin 'christoomey/vim-tmux-navigator'
-
     Plugin 'Chiel92/vim-autoformat'
 
     Plugin 'maksimr/vim-jsbeautify'
     Plugin 'heavenshell/vim-jsdoc'
+
+    Plugin 'christoomey/vim-tmux-navigator'
 
     Plugin 'bling/vim-airline'
 
