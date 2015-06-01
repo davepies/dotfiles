@@ -26,6 +26,7 @@
     Plugin 'jimmyhchan/dustjs.vim'
     Plugin 'marijnh/tern_for_vim'
     Plugin 'miripiruni/Csscomb-for-Vim'
+    Plugin 'tpope/vim-obsession'
 
     Plugin 'Chiel92/vim-autoformat'
 
