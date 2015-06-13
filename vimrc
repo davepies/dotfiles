@@ -61,6 +61,9 @@
 
   call vundle#end()
 
+" Speed things up
+  set lazyredraw
+
 " CursorLine
   set cursorline
   hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
