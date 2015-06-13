@@ -18,6 +18,7 @@ brew install fortune
 brew install cowthink
 
 brew install zsh
+brew install tmux
 
 brew tap homebrew/versions
 brew install lua52
@@ -50,3 +51,6 @@ npm i -g eslint babel-eslint eslint-plugin-react
 # vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +BundleInstall +qall
+
+# tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

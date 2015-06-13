@@ -26,13 +26,14 @@
     Plugin 'jimmyhchan/dustjs.vim'
     Plugin 'marijnh/tern_for_vim'
     Plugin 'miripiruni/Csscomb-for-Vim'
-
-    Plugin 'christoomey/vim-tmux-navigator'
+    Plugin 'tpope/vim-obsession'
 
     Plugin 'Chiel92/vim-autoformat'
 
     Plugin 'maksimr/vim-jsbeautify'
     Plugin 'heavenshell/vim-jsdoc'
+
+    Plugin 'christoomey/vim-tmux-navigator'
 
     Plugin 'bling/vim-airline'
 
