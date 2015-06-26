@@ -27,7 +27,7 @@ tmux
 
 EOBUNDLES
 
-antigen theme amuse # norm lambda cloud
+antigen theme norm # lambda cloud amuse
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
