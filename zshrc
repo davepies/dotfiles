@@ -58,7 +58,7 @@ alias glf='git log --pretty=fuller'
 alias glfg='git log --pretty=fuller --graph'
 
 alias mongod='mongod --config /usr/local/etc/mongod.conf'
-alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
