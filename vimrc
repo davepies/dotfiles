@@ -1,3 +1,9 @@
+" Vundle does not like fish
+" https://github.com/VundleVim/Vundle.vim/issues/175
+  if $SHELL =~ 'bin/fish'
+    set shell=/bin/sh
+  endif
+
 " Required by Vundle
   set nocompatible
   filetype off
