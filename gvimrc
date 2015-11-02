@@ -7,6 +7,7 @@ if has("gui_running")
   set guifont=Input\ Mono:h15
   set guioptions=-t " Hide toolbar
   set guioptions=+c " Disable dialogues
+  hi NonText guifg=bg
 
 endif
 

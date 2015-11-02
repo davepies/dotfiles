@@ -17,13 +17,12 @@
     Plugin 'Lokaltog/vim-easymotion'
     Plugin 'Shougo/neocomplete.vim'
     Plugin 'tmhedberg/matchit'
-    Plugin 'Townk/vim-autoclose.git'
+    Plugin 'Raimondi/delimitMate'
     Plugin 'scrooloose/nerdtree'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'nathanaelkane/vim-indent-guides.git'
     Plugin 'scrooloose/syntastic.git'
     Plugin 'sheerun/vim-polyglot'
-    Plugin 'jimmyhchan/dustjs.vim'
     Plugin 'marijnh/tern_for_vim'
     Plugin 'miripiruni/Csscomb-for-Vim'
     Plugin 'tpope/vim-obsession'
@@ -61,6 +60,9 @@
     Plugin 'majutsushi/tagbar'
 
   call vundle#end()
+
+  " Do not display tilde
+  hi NonText ctermfg=black guifg=bg
 
 " Speed things up
   set lazyredraw
