@@ -26,6 +26,9 @@ brew install lua52
 brew install thefuck
 brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
+# https://github.com/defunkt/gist
+brew install gist
+
 # Install native apps
 brew install caskroom/cask/brew-cask
 
