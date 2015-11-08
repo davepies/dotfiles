@@ -15,6 +15,7 @@
 
     Plugin 'junegunn/vim-easy-align'
     Plugin 'bufkill.vim'
+    Plugin 'vim-scripts/ZoomWin'
     Plugin 'rking/ag.vim'
     Plugin 'kien/ctrlp.vim'
     Plugin 'tomtom/tcomment_vim'
