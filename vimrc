@@ -4,7 +4,6 @@
     set shell=/bin/sh
   endif
 
-
 " Required by Vundle
   set nocompatible
   filetype off
@@ -87,8 +86,8 @@
 
   " better key bindings for UltiSnipsExpandTrigger
     let g:UltiSnipsExpandTrigger = "<tab>"
-    let g:UltiSnipsJumpForwardTrigger = "<tab>"
-    let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " syntastic
   let g:syntastic_javascript_checkers=['eslint']
@@ -107,10 +106,13 @@
   set encoding=utf-8
   set t_Co=256
   set fillchars+=stl:\ ,stlnc:\
-  set term=xterm-256color
   set termencoding=utf-8
 
   filetype plugin indent on
+
+  if !has('nvim')
+    set term=xterm-256color
+  endif
 
 " don't beep for errors
   set visualbell
@@ -186,8 +188,6 @@
 
 " AutoClose
   let g:AutoCloseExpandEnterOn="{"
-
-  " let g:acp_enableAtStartup = 0
 
 " Css Comb
   autocmd FileType css,scss nmap cc :CSScomb<CR>
