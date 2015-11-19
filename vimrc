@@ -1,7 +1,11 @@
+let leader         = ' '
+let maplocalleader = ' '
+
 " vim plug
   " installation:
   " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
   call plug#begin('~/.vim/plugged')
 
     Plug 'junegunn/vim-easy-align'
@@ -53,6 +57,8 @@
 
     " fzf
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
+
 
   call plug#end()
 
@@ -301,6 +307,17 @@
   " List of colors that you do not want. ANSI code or #RRGGBB
   let g:rainbow#blacklist = [233, 234]
 
+
+" fzf
+  if has('nvim')
+      let $FZF_DEFAULT_OPTS .= ' --inline-info'
+  endif
+
+  nnoremap <silent> <Leader><Leader> :Files<CR>
+  nnoremap <silent> <Leader>C        :Colors<CR>
+  nnoremap <silent> <Leader><Enter>  :Buffers<CR>
+  nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
+
 " FUNCTIONS
   " Strip trailing whitespace
   function! <SID>StripTrailingWhitespaces()
@@ -351,9 +368,9 @@
   endif
 
 " Colors
-if has('gui_running')
-  set guifont=Monaco:h14 columns=80 lines=40
-  silent! colo seoul256-light
-else
-  silent! colo seoul256
-endif
+  if has('gui_running')
+    set guifont=Monaco:h14 columns=80 lines=40
+    silent! colo seoul256-light
+  else
+    silent! colo seoul256
+  endif
