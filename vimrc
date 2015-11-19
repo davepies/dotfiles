@@ -1,5 +1,3 @@
-let mapleader = "\<Space>"
-
 " vim plug
   " installation:
   " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -7,11 +5,12 @@ let mapleader = "\<Space>"
 
   call plug#begin('~/.vim/plugged')
 
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
     Plug 'junegunn/vim-easy-align'
     Plug 'bufkill.vim'
     Plug 'vim-scripts/ZoomWin'
     Plug 'rking/ag.vim'
-    Plug 'kien/ctrlp.vim'
     Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-surround'
     Plug 'Lokaltog/vim-easymotion'
@@ -25,7 +24,13 @@ let mapleader = "\<Space>"
     Plug 'sheerun/vim-polyglot'
     Plug 'marijnh/tern_for_vim'
 
-    Plug 'kassio/neoterm'
+    if has('nvim')
+      Plug 'kassio/neoterm'
+    endif
+    
+    if !has('nvim')
+      Plug 'kien/ctrlp.vim'
+    endif
 
     Plug 'junegunn/seoul256.vim'
 
@@ -60,6 +65,9 @@ let mapleader = "\<Space>"
 
 
   call plug#end()
+
+let mapleader      = "\<Space>"
+let localmapleader = "\<Space>"
 
 " statusline
   " %< Where to truncate
@@ -262,20 +270,22 @@ let mapleader = "\<Space>"
   let g:netrw_liststyle=3         " Tree
 
 " CtrlP
-  let g:ctrlp_working_path_mode = 0 " Don't manage. Plays nicely with `bundle open <name>`
-  let g:ctrlp_custom_ignore = {
-    \ 'dir': '\.git$\|\.hg$\|\.svn$\|node_modules$\|logs$\|tmp$\|source_maps$\|vendor/gems$',
-    \ 'file': '',
-    \ 'link': '',
-    \ }
-  let g:ctrlp_buffer_func = { 'enter': 'CtrlPEnter' }                   " Kill buffers in CtrlP with <C-@>
-  func! CtrlPEnter()                                                    " https://github.com/kien/ctrlp.vim/issues/280
-    nnoremap <buffer> <silent> <C-@> :call <sid>CtrlPDeleteBuffer()<CR>
-  endfunc
-  func! s:CtrlPDeleteBuffer()
-    exec "bd" fnamemodify(getline('.')[2:], ':p')
-    exec "norm \<F5>"
-  endfunc
+  if !has('nvim')
+    let g:ctrlp_working_path_mode = 0 " Don't manage. Plays nicely with `bundle open <name>`
+    let g:ctrlp_custom_ignore = {
+      \ 'dir': '\.git$\|\.hg$\|\.svn$\|node_modules$\|logs$\|tmp$\|source_maps$\|vendor/gems$',
+      \ 'file': '',
+      \ 'link': '',
+      \ }
+    let g:ctrlp_buffer_func = { 'enter': 'CtrlPEnter' }                   " Kill buffers in CtrlP with <C-@>
+    func! CtrlPEnter()                                                    " https://github.com/kien/ctrlp.vim/issues/280
+      nnoremap <buffer> <silent> <C-@> :call <sid>CtrlPDeleteBuffer()<CR>
+    endfunc
+    func! s:CtrlPDeleteBuffer()
+      exec "bd" fnamemodify(getline('.')[2:], ':p')
+      exec "norm \<F5>"
+    endfunc
+  endif
 
 " AutoClose
   let g:AutoCloseExpandEnterOn="{"
@@ -313,9 +323,9 @@ let mapleader = "\<Space>"
       let $FZF_DEFAULT_OPTS .= ' --inline-info'
   endif
 
-  nnoremap <silent> <Leader><Leader> :Files<CR>
-  nnoremap <silent> <Leader>C        :Colors<CR>
-  nnoremap <silent> <Leader><Enter>  :Buffers<CR>
+  nnoremap <silent> <C-P> :Files<CR>
+  nnoremap <silent> <Leader>C :Colors<CR>
+  nnoremap <silent> <C-B> :Buffers<CR>
   nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
 
 " FUNCTIONS
@@ -347,9 +357,11 @@ let mapleader = "\<Space>"
   nnoremap <ESC> :noh<CR><ESC>|"                    Clear highlights
   nmap <LEADER>l :set list!<CR>|"                   Toggle list characters (Invisibles)
   map <LEADER>s :set spell!<CR>|"                   Toggle spell
-  map <LEADER>f :Ack!<Space>|"                      Search
-  map <C-B> :CtrlPBuffer<CR>|"                      CtrlP in buffer mode
-  map <C-T> :CtrlPTag<CR>|"
+
+  if !has('nvim')
+    map <C-B> :CtrlPBuffer<CR>|"                      CtrlP in buffer mode
+    map <C-T> :CtrlPTag<CR>|"
+  end
 
 " FILETYPES
   au FileType javascript setl sw=4 sts=4 et
