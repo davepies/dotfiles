@@ -57,3 +57,7 @@ vim +BundleInstall +qall
 
 # tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+#nvim
+brew tap neovim/neovim
+brew install --HEAD neovim
