@@ -1,82 +1,170 @@
-" Vundle does not like fish
-" https://github.com/VundleVim/Vundle.vim/issues/175
-  if $SHELL =~ 'bin/fish'
-    set shell=/bin/sh
-  endif
+" vim plug
+  " installation:
+  " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  call plug#begin('~/.vim/plugged')
 
-" Required by Vundle
-  set nocompatible
-  filetype off
+    Plug 'junegunn/vim-easy-align'
+    Plug 'bufkill.vim'
+    Plug 'vim-scripts/ZoomWin'
+    Plug 'rking/ag.vim'
+    Plug 'kien/ctrlp.vim'
+    Plug 'tomtom/tcomment_vim'
+    Plug 'tpope/vim-surround'
+    Plug 'Lokaltog/vim-easymotion'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+    Plug 'tmhedberg/matchit'
+    Plug 'Raimondi/delimitMate'
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'scrooloose/syntastic'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'marijnh/tern_for_vim'
 
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+    Plug 'kassio/neoterm'
 
-    Plugin 'gmarik/Vundle.vim'
+    Plug 'junegunn/seoul256.vim'
 
-    Plugin 'junegunn/vim-easy-align'
-    Plugin 'bufkill.vim'
-    Plugin 'vim-scripts/ZoomWin'
-    Plugin 'rking/ag.vim'
-    Plugin 'kien/ctrlp.vim'
-    Plugin 'tomtom/tcomment_vim'
-    Plugin 'tpope/vim-eunuch'
-    Plugin 'tpope/vim-surround'
-    Plugin 'Lokaltog/vim-easymotion'
-    Plugin 'Valloric/YouCompleteMe'
-    Plugin 'tmhedberg/matchit'
-    Plugin 'Raimondi/delimitMate'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'scrooloose/nerdcommenter'
-    Plugin 'nathanaelkane/vim-indent-guides.git'
-    Plugin 'scrooloose/syntastic.git'
-    Plugin 'sheerun/vim-polyglot'
-    Plugin 'marijnh/tern_for_vim'
-    Plugin 'miripiruni/Csscomb-for-Vim'
-    Plugin 'tpope/vim-obsession'
+    Plug 'junegunn/rainbow_parentheses.vim'
 
-    Plugin 'Chiel92/vim-autoformat'
+    Plug 'junegunn/vim-emoji'
 
-    Plugin 'maksimr/vim-jsbeautify'
-    Plugin 'heavenshell/vim-jsdoc'
+    Plug 'heavenshell/vim-jsdoc'
 
-    Plugin 'christoomey/vim-tmux-navigator'
+    Plug 'christoomey/vim-tmux-navigator'
 
-    Plugin 'bling/vim-airline'
+    " Plug 'bling/vim-airline'
 
     " Git
-    Plugin 'tpope/vim-fugitive'
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
 
     " Colors
-    Plugin 'chriskempson/base16-vim'
+    Plug 'chriskempson/base16-vim'
 
-    " Dash
-    Plugin 'rizzatti/funcoo.vim'
-    Plugin 'rizzatti/dash.vim'
-
-    Plugin 'editorconfig/editorconfig-vim'
+    Plug 'editorconfig/editorconfig-vim'
 
     " Multiple Cursors
-    Plugin 'terryma/vim-multiple-cursors'
+    Plug 'terryma/vim-multiple-cursors'
 
     " Snippets
-    Plugin 'SirVer/ultisnips'
-    Plugin 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-    " Ctags Generation
-    Plugin 'szw/vim-tags'
-    Plugin 'majutsushi/tagbar'
+    " fzf
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-  call vundle#end()
+  call plug#end()
 
-  " Do not display tilde
+" statusline
+  " %< Where to truncate
+  " %n buffer number
+  " %F Full path
+  " %m Modified flag: [+], [-]
+  " %r Readonly flag: [RO]
+  " %y Type:          [vim]
+  " fugitive#statusline()
+  " %= Separator
+  " %-14.(...)
+  " %l Line
+  " %c Column
+  " %V Virtual column
+  " %P Percentage
+  " %#HighlightGroup#
+  set statusline=%<[%n]\ %F\ %m%r%y\ %{exists('g:loaded_fugitive')?fugitive#statusline():''}\ %=%-14.(%l,%c%V%)\ %P
+  silent! if emoji#available()
+    let s:ft_emoji = map({
+      \ 'c':          'baby_chick',
+      \ 'clojure':    'lollipop',
+      \ 'coffee':     'coffee',
+      \ 'cpp':        'chicken',
+      \ 'css':        'art',
+      \ 'eruby':      'ring',
+      \ 'gitcommit':  'soon',
+      \ 'haml':       'hammer',
+      \ 'help':       'angel',
+      \ 'html':       'herb',
+      \ 'java':       'older_man',
+      \ 'javascript': 'metal',
+      \ 'make':       'seedling',
+      \ 'markdown':   'book',
+      \ 'perl':       'camel',
+      \ 'python':     'snake',
+      \ 'ruby':       'gem',
+      \ 'scala':      'barber',
+      \ 'sh':         'shell',
+      \ 'slim':       'dancer',
+      \ 'text':       'books',
+      \ 'vim':        'poop',
+      \ 'vim-plug':   'electric_plug',
+      \ 'yaml':       'yum',
+      \ 'yaml.jinja': 'yum'
+    \ }, 'emoji#for(v:val)')
+
+    function! S_filetype()
+      if empty(&filetype)
+        return emoji#for('grey_question')
+      else
+        return get(s:ft_emoji, &filetype, '['.&filetype.']')
+      endif
+    endfunction
+
+    function! S_modified()
+      if &modified
+        return emoji#for('kiss').' '
+      elseif !&modifiable
+        return emoji#for('construction').' '
+      else
+        return ''
+      endif
+    endfunction
+
+    function! S_fugitive()
+      if !exists('g:loaded_fugitive')
+        return ''
+      endif
+      let head = fugitive#head()
+      if empty(head)
+        return ''
+      else
+        return head == 'master' ? emoji#for('crown') : emoji#for('dango').'='.head
+      endif
+    endfunction
+
+    let s:braille = split('"⠉⠒⠤⣀', '\zs')
+    function! Braille()
+      let len = len(s:braille)
+      let [cur, max] = [line('.'), line('$')]
+      let pos  = min([len * (cur - 1) / max([1, max - 1]), len - 1])
+      return s:braille[pos]
+    endfunction
+
+    hi def link User1 TablineFill
+    let s:cherry = emoji#for('cherry_blossom')
+    function! MyStatusLine()
+      let mod = '%{S_modified()}'
+      let ro  = "%{&readonly ? emoji#for('lock') . ' ' : ''}"
+      let ft  = '%{S_filetype()}'
+      let fug = ' %{S_fugitive()}'
+      let sep = ' %= '
+      let pos = ' %l,%c%V '
+      let pct = ' %P '
+
+      return s:cherry.' [%n] %F %<'.mod.ro.ft.fug.sep.pos.'%{Braille()}%*'.pct.s:cherry
+    endfunction
+
+    " Note that the "%!" expression is evaluated in the context of the
+    " current window and buffer, while %{} items are evaluated in the
+    " context of the window that the statusline belongs to.
+    set statusline=%!MyStatusLine()
+  endif
+
+
+" Do not display tilde
   hi NonText ctermfg=black guifg=bg
 
 " Speed things up
   set lazyredraw
-
-" CursorLine
-  " set cursorline
-  " hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
 
 " YCM
   " make YCM compatible with UltiSnips (using supertab)
@@ -92,24 +180,21 @@
 " syntastic
   let g:syntastic_javascript_checkers=['eslint']
 
-" JsBeautify(
-  map <c-f> :call JsBeautify()<cr>
-
 " easy align
   vmap <Enter> <Plug>(EasyAlign)
   nmap ga <Plug>(EasyAlign)
 
 " for airline
-  set laststatus=2
-  let g:airline_powerline_fonts=1
-  set guifont=Inconsolata\ for\ Powerline:h15
-  set encoding=utf-8
-  set t_Co=256
-  set fillchars+=stl:\ ,stlnc:\
-  set termencoding=utf-8
-
-  filetype plugin indent on
-
+  " set laststatus=2
+  " let g:airline_powerline_fonts=1
+  " set guifont=Inconsolata\ for\ Powerline:h15
+  " set encoding=utf-8
+  " set t_Co=256
+  " set fillchars+=stl:\ ,stlnc:\
+  " set termencoding=utf-8
+  "
+  " filetype plugin indent on
+  "
   if !has('nvim')
     set term=xterm-256color
   endif
@@ -203,6 +288,19 @@
   let g:UltiSnipsJumpBackwardTrigger="<c-z>"
   let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips', $HOME.'/dotfiles/vimsnippets']
 
+" Gitgutter
+  silent! if emoji#available()
+    let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+    let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+    let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+    let g:gitgutter_sign_modified_removed = emoji#for('collision')
+  endif
+
+" Rainbows
+  let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+  " List of colors that you do not want. ANSI code or #RRGGBB
+  let g:rainbow#blacklist = [233, 234]
+
 " FUNCTIONS
   " Strip trailing whitespace
   function! <SID>StripTrailingWhitespaces()
@@ -245,3 +343,17 @@
 
 " Ctags
   set tags=tags,./tags
+
+" 80 chars/line
+  set textwidth=0
+  if exists('&colorcolumn')
+    set colorcolumn=80
+  endif
+
+" Colors
+if has('gui_running')
+  set guifont=Monaco:h14 columns=80 lines=40
+  silent! colo seoul256-light
+else
+  silent! colo seoul256
+endif

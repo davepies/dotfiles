@@ -73,3 +73,5 @@ todo () {
 # NODE
 export NODE_ENV=development
 export PATH="/usr/local/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
