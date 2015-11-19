@@ -22,7 +22,7 @@
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'scrooloose/syntastic'
     Plug 'sheerun/vim-polyglot'
-    Plug 'marijnh/tern_for_vim'
+    Plug 'marijnh/tern_for_vim', { 'do': './npm i'}
 
     if has('nvim')
       Plug 'kassio/neoterm'
