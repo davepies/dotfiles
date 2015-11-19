@@ -47,11 +47,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-  export TERM='xterm-256color'
-else
-  export TERM='xterm-color'
-fi
+export TERM='xterm-256color'
 
 alias c='clear'
 alias glf='git log --pretty=fuller'

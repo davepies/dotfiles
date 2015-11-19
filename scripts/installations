@@ -61,3 +61,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 #nvim
 brew tap neovim/neovim
 brew install --HEAD neovim
+
+#fix for C-H
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
+tic $TERM.ti
