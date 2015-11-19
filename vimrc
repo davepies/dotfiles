@@ -1,5 +1,4 @@
-let leader         = ' '
-let maplocalleader = ' '
+let mapleader = "\<Space>"
 
 " vim plug
   " installation:
@@ -91,7 +90,7 @@ let maplocalleader = ' '
       \ 'help':       'angel',
       \ 'html':       'herb',
       \ 'java':       'older_man',
-      \ 'javascript': 'metal',
+      \ 'javascript': 'fist',
       \ 'make':       'seedling',
       \ 'markdown':   'book',
       \ 'perl':       'camel',
@@ -146,7 +145,8 @@ let maplocalleader = ' '
     endfunction
 
     hi def link User1 TablineFill
-    let s:cherry = emoji#for('cherry_blossom')
+    let s:start = emoji#for('rocket')
+    let s:end = emoji#for('rocket')
     function! MyStatusLine()
       let mod = '%{S_modified()}'
       let ro  = "%{&readonly ? emoji#for('lock') . ' ' : ''}"
@@ -156,7 +156,7 @@ let maplocalleader = ' '
       let pos = ' %l,%c%V '
       let pct = ' %P '
 
-      return s:cherry.' [%n] %F %<'.mod.ro.ft.fug.sep.pos.'%{Braille()}%*'.pct.s:cherry
+      return s:start.' [%n] %F %<'.mod.ro.ft.fug.sep.pos.'%{Braille()}%*'.pct.s:end
     endfunction
 
     " Note that the "%!" expression is evaluated in the context of the

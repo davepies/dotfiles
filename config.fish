@@ -20,6 +20,12 @@
   alias c='clear'
   alias gst='git status'
 
+  alias c='clear'
+
+  alias gst='git status'
+  alias gco='git checkout'
+  alias vim='env TERM=xterm-256color nvim'
+
 
 # Want vi everywhere
 
@@ -29,6 +35,7 @@
 # ENV Variables
   export EDITOR=vim
   export ANDROID_HOME=/usr/local/opt/android-sdk
+  export TERM=xterm-256color
 
 # Functions
 
@@ -43,4 +50,3 @@
     end
     open http://google.com/search\?q=$search_term
   end
-
