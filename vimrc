@@ -27,7 +27,7 @@
     if has('nvim')
       Plug 'kassio/neoterm'
     endif
-    
+
     if !has('nvim')
       Plug 'kien/ctrlp.vim'
     endif
