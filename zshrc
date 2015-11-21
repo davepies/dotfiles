@@ -1,27 +1,32 @@
-source ~/.antigen.zsh
+source ~/dotfiles/zgen/zgen.zsh
 
 # vi mode key timeout
 export KEYTIMEOUT=1
 
-antigen use oh-my-zsh
+# check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
 
-antigen bundles <<EOBUNDLES
+    zgen oh-my-zsh
 
-zsh-users/zsh-completions src
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-history-substring-search
+    # plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh vi-mode
+    zgen oh-my-zsh httpie
 
-rupa/z
+zgen loadall <<EOPLUGINS
+    zsh-users/zsh-completions src
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-history-substring-search
+EOPLUGINS
 
-git
-npm
-httpie
-vi-mode
+    zgen oh-my-zsh themes/muse
 
-EOBUNDLES
-
-antigen theme muse # lambda cloud amuse
-antigen apply
+    # save all to init script
+    zgen save
+fi
 
 # default bindings for zsh-users/zsh-history-substring-search
 zmodload zsh/terminfo
