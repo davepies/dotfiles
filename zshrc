@@ -10,24 +10,17 @@ antigen bundles <<EOBUNDLES
 zsh-users/zsh-completions src
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
-# sindresorhus/pure
 
 rupa/z
 
 git
-git-extras
 npm
-node
-osx
 httpie
 vi-mode
-web-search
-tmux
-# chucknorris
 
 EOBUNDLES
 
-antigen theme norm # lambda cloud amuse
+antigen theme muse # lambda cloud amuse
 antigen apply
 
 # default bindings for zsh-users/zsh-history-substring-search
@@ -69,5 +62,7 @@ todo () {
 # NODE
 export NODE_ENV=development
 export PATH="/usr/local/bin:$PATH"
+
+eval "$(~/.config/base16-shell/profile_helper.sh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

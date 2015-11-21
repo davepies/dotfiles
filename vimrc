@@ -3,6 +3,7 @@
   " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+
   call plug#begin('~/.vim/plugged')
 
     Plug 'junegunn/goyo.vim'
@@ -203,9 +204,12 @@ let localmapleader = "\<Space>"
   " let g:airline_powerline_fonts=1
   " set guifont=Inconsolata\ for\ Powerline:h15
   " set encoding=utf-8
-  " set t_Co=256
-  " set fillchars+=stl:\ ,stlnc:\
-  " set termencoding=utf-8
+  "
+  set t_Co=256
+  set fillchars+=vert:\|
+  set termencoding=utf-8
+  hi vertsplit guifg=fg guibg=bg
+
   "
   " filetype plugin indent on
   "
@@ -382,7 +386,12 @@ let localmapleader = "\<Space>"
 " Colors
   if has('gui_running')
     set guifont=Monaco:h14 columns=80 lines=40
-    silent! colo seoul256-light
+    silent! color seoul256-light
   else
-    silent! colo seoul256
+    silent! color base16-flat
+  endif
+
+  if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
   endif

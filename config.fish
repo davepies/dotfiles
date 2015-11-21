@@ -50,3 +50,5 @@
     end
     open http://google.com/search\?q=$search_term
   end
+
+eval sh $HOME/.config/base16-shell/profile_helper.sh
