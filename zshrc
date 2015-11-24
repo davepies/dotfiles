@@ -13,8 +13,9 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/npm
     zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh vi-mode
-    zgen oh-my-zsh httpie
+    zgen oh-my-zsh plugins/vi-mode
+    zgen oh-my-zsh plugins/httpie
+    zgen oh-my-zsh plugins/z
 
 zgen loadall <<EOPLUGINS
     zsh-users/zsh-completions src

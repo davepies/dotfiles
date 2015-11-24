@@ -73,3 +73,8 @@ brew install --HEAD neovim
 
 #fix for C-H
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti && tic $TERM.ti
+
+
+# base16 profile switcher
+mkdir ~/.config && git clone https://github.com/JohnMorales/base16-shell ~/.config/base16-shell
+
