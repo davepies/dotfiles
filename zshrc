@@ -56,6 +56,8 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+alias vim="nvim"
+
 # TODO
 todo () {
   IFS_OLD="$IFS"
