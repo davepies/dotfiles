@@ -332,6 +332,10 @@ let localmapleader = "\<Space>"
   nnoremap <silent> <C-B> :Buffers<CR>
   nnoremap <silent> <Leader>ag       :Ag <C-R><C-W><CR>
 
+" tern
+" prevent scratch buffer
+  set completeopt-=preview
+
 " FUNCTIONS
   " Strip trailing whitespace
   function! <SID>StripTrailingWhitespaces()
@@ -395,3 +399,9 @@ let localmapleader = "\<Space>"
     let base16colorspace=256
     source ~/.vimrc_background
   endif
+
+" Folding
+  set foldmethod=indent
+  set foldnestmax=10
+  set nofoldenable
+  set foldlevelstart=3
