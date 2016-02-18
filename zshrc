@@ -71,6 +71,6 @@ todo () {
 export NODE_ENV=development
 export PATH="/usr/local/bin:$PATH"
 
-eval "$(~/.config/base16-shell/profile_helper.sh)"
+# eval "$(~/.config/base16-shell/profile_helper.sh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
