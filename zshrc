@@ -74,3 +74,5 @@ export PATH="/usr/local/bin:$PATH"
 # eval "$(~/.config/base16-shell/profile_helper.sh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
